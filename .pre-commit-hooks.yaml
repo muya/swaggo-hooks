@@ -5,6 +5,7 @@
   always_run: false
   fail_fast: false
   verbose: false
+  require_serial: true
   description: 'Run swag fmt to format Swag annotations in your code.'
   args: []
 
@@ -15,5 +16,6 @@
   always_run: false
   fail_fast: false
   verbose: false
+  require_serial: true
   description: 'Run swag init to generate Swagger docs from Swag annotations, and generate the required files.'
   args: []
