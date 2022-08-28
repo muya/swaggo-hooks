@@ -54,3 +54,19 @@ in your `$PATH`.
 - `swag-fmt` - Runs `swag fmt` on all files in the project.
 - `swag-init` - Runs `swag init` on the project. Please
   reference [available CLI flags in the documentation](https://github.com/swaggo/swag#swag-cli).
+
+## Additional Notes
+
+### Usage with `end-of-file-fixer`
+
+- When using the `swag-fmt` hook together with `end-of-file-fixer`
+  from [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks), consider:
+    - Defining the `end-of-file-fixer` _after_ the `swag-fmt` hook.
+    - Excluding the `swagger.json` file from pre-commit actions by adding this to the top-level exclude
+      pattern, otherwise you end up in an infinite loop where `swag-fmt` generates JSON without a new line at the end,
+      and `end-of-file-fixer` keeps adding it:
+
+      ```yaml
+      exclude: '^.*swagger\.json$'
+      ```
+
