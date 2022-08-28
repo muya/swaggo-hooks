@@ -1,4 +1,4 @@
-# pre-commit-swaggo
+# swaggo-hooks
 
 [pre-commit](https://pre-commit.com/) hooks for Go projects using https://github.com/swaggo/swag
 
@@ -9,7 +9,7 @@ Add this to your `.pre-commit-config.yaml` file:
 ```yaml
 repos:
   # ... other repos ...
-  - repo: https://github.com/muya/pre-commit-swaggo
+  - repo: https://github.com/muya/swaggo-hooks
     rev: "main"
     hooks:
       - id: swag-fmt
@@ -30,7 +30,7 @@ swag init --parseInternal --requiredByDefault --parseDependency --dir "./cmd/api
 ```yaml
 repos:
   # ... other repos ...
-  - repo: https://github.com/muya/pre-commit-swaggo
+  - repo: https://github.com/muya/swaggo-hooks
     rev: "main"
     hooks:
       - id: swag-fmt
