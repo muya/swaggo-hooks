@@ -6,4 +6,4 @@ then
     exit 1
 fi
 
-swag fmt "$@"
+swag init "$@"

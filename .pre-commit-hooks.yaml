@@ -5,5 +5,15 @@
   always_run: false
   fail_fast: false
   verbose: false
-  description: 'Run swag fmt to format Swaggo comments in your code'
+  description: 'Run swag fmt to format Swag annotations in your code.'
+  args: []
+
+- id: swag-init
+  name: swag-init
+  entry: run-swag-init.sh
+  language: script
+  always_run: false
+  fail_fast: false
+  verbose: false
+  description: 'Run swag init to generate Swagger docs from Swag annotations, and generate the required files.'
   args: []
