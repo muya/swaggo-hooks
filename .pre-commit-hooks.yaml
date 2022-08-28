@@ -1,0 +1,9 @@
+- id: swag-fmt
+  name: swag-fmt
+  entry: run-swag-fmt.sh
+  language: script
+  always_run: false
+  fail_fast: false
+  verbose: false
+  description: 'Run swag fmt to format Swaggo comments in your code'
+  args: []
